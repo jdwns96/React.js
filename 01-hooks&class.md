@@ -1,5 +1,5 @@
 
-### @ state , useState
+### @ state , @useState
 
 **CLASS** : 
 ```
@@ -36,6 +36,53 @@
 
 ***
 
-### 
+### @render
+**CLASS** :
+```
+    App class extends React.component{
 
+        ...
 
+        render(){
+            return(
+                <>
+                    <div></div>
+                </>
+            )
+        }
+    }
+``` 
+**HOOKS** :
+```
+    const App = () => {
+
+        ...
+
+        return(
+            <>
+                <div></div>
+            </>
+        )
+    }
+```
+<br />
+
+***
+
+### @componentDidMount, @useEffect
+```
+    rendering 이후 한번만 실행되는 공간.
+    이 자리에 보통 AJAX 통신을 해서 데이터를 가져온다.
+```
+**CLASS** :
+```
+    componentDidMount() {   
+        ...
+    }
+```
+**HOOKS** :
+```
+    useEffect(() => {
+        ...
+    }, [] );  // 반드시 빈 배열을 넣어야 componentDidMount 유사 역할
+```
