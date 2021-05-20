@@ -86,3 +86,44 @@
         ...
     }, [] );  // 반드시 빈 배열을 넣어야 componentDidMount 유사 역할
 ```
+<br />
+
+***
+
+### @componentDidUpdate, @useEffect
+```
+    props나 state 가 변할때 동작하는 함수
+    클래스는 if 를 통해 한번에 분기별 처리를 해주고 Hooks 에서는 각각 처리를 해준다.
+
+    Hooks 에서 순수 componentDidUpdate 처럼 동작하려면 약간의 조작이 필요하다.
+```
+**CLASS** :
+```
+    componentDidUpdate(prevProps, prevState) {  
+        if(this.state.winBalls.length === 0){
+            ...
+        }else{
+            ...
+        }
+    }
+```
+**HOOKS** :
+```
+    const didUpdate = useRef(false);    // DidMount 행위를 막기 위한 조작
+
+    useEffect(() => {
+        if(!didUpdate.current){
+            didUpdate.current = true;
+        }else{
+            ...
+        }
+    }, [ <변경값> ]); 
+```
+<br />
+
+***
+
+### @componentWillUnmount, @useEffect 
+**CLASS** :
+
+**HOOKS** :
