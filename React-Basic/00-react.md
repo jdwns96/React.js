@@ -30,3 +30,5 @@ ReactDOM.render(
 );
 
 ```
+
+ render 의 첫번째 파라미터로 ReactComponent 를, 두번째 인자로 DOM객체를 넣는다.
