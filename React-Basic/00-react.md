@@ -5,7 +5,7 @@
 3. class 는 className 으로 치환하고 예약어와 겹치는 for 는 htmlFor 로 사용한다. <br/>
 4. 이벤트 핸들링이나 대부분의 요소는 카멜표기법으로 한다.  ex) onclick => onClick. <br/>
 5. 주석은 {/* 주석 */} 으로 표기한다. <br/>
-6. HTML 의 커스텀 태그는 '<my-tag>' 표기였으나 React 는 '<MyTag>' 형태로표현한다. <br/>
+6. HTML 의 커스텀 태그는 ```<my-tag />``` 표기였으나 React 는 ```<MyTag />``` 형태로표현한다. <br/>
 7. JSX 내부에 js 를 사용하려면 {  } 을 열고 사용한다. <br/>
 
 **React.createElement( 노드이름 , { props }, 자식요소)**
