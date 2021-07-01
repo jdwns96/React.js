@@ -1,7 +1,6 @@
 ```javascript
 import React, { useReducer } from 'react';
 
-
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RENAME = 'RENAME';

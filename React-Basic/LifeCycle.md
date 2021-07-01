@@ -7,15 +7,15 @@
 이 부분은 컴포넌트 '생성자 함수' 입니다. 가장 먼저 실행되는 함수로 초기 state를 설정합니다.
 <br/>
 
-**conponentWillMount** (deprecated)
+**conponentWillMount** (deprecated) <br/>
 render 가 발생하기전 호출되는 API, 이후 componentDidMount 가 처리
 <br/>
 
-**render**
+**render** <br/>
 렌더링 실행, 화면에 요소를 그려준다.
 <br/>
 
-**componentDidMount**
+**componentDidMount** 
 ```javascript
     componentDidMount() {
         // 외부 라이브러리 연동: D3, masonry, etc

@@ -1,6 +1,6 @@
 #### 부모 컴포넌트
 ```javascript
-  import React, { createContext, useReducer } from 'react'
+import React, { createContext, useReducer } from 'react'
 import Ch from './Ch';
 
 export const GlobalContext = createContext(null);
@@ -47,7 +47,7 @@ export default Test;
 
 #### 자식 컴포넌트
 ```javascript
-  import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { GlobalContext, INCRE, DECRE } from './Pa';
 
 const Ch = () => {
