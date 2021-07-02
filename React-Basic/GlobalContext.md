@@ -102,7 +102,61 @@
 ```
 
 
-### components/
+### components
+
+##### Count.jsx
 ```javascript
-  
+  import React, {useContext, useReducer} from 'react';
+  import GlobalContext from './Context';
+
+  const Count = (props) => {
+
+      const { count } = useContext(GlobalContext);
+      const { reducer, initialState, increase, decrease } = count;
+
+      const [state, dispatch] = useReducer(reducer, initialState);
+
+      const plusHandler = e => {
+          dispatch(increase());
+      }
+      const minHandler = e => {
+          dispatch(decrease());
+      }
+
+      return(
+          <>  
+              <p>{state.num}</p>
+              <button onClick={ plusHandler }> + </button>
+              <button onClick={ minHandler }> - </button>
+          </>
+      );
+  }
+
+  export default Count;
+```
+##### Input.jsx
+```javascript
+  import React, { useContext, useReducer } from 'react';
+  import GlobalContext from './Context'; 
+
+  const Input = () => {
+
+      const { input } = useContext(GlobalContext);
+      const { reducer, initialState, change } = input ;
+
+      const [state, dispatch] = useReducer(reducer, initialState);
+
+      const changeHandler = e => {
+          dispatch(change(e.target.value));
+      }
+
+      return (
+          <>  
+              <input type="text" value={state.text} onChange={changeHandler}/>
+              <p>{state.text}</p>
+          </>
+      );
+  }
+
+  export default Input;
 ```
