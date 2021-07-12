@@ -59,12 +59,17 @@ export default combineReducers({
 import React from "react";
 import { createStore } from "redux";
 import rootReducer from "./modules";
+import { Provider } from "react-redux";
 
 const store = createStore(rootReducer);
 console.log(store.getState());
 
 ReactDOM.render(
-  <React.StrictMode>...</React.StrictMode>,
+  <React.StrictMode>
+    <Provider store={store}>...</Provider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 ```
+
+콘솔을 확인해 보면 store 값을 확인할수 있다.
