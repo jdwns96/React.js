@@ -73,3 +73,35 @@ ReactDOM.render(
 ```
 
 콘솔을 확인해 보면 store 값을 확인할수 있다.
+
+```javascript
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import * as counter from "./modules/counter";
+
+const Temp = (props) => {
+  const dispatch = useDispatch();
+  console.log(counter);
+  console.log(useSelector((store) => store.counter));
+  return (
+    <div>
+      <button
+        onClick={() => {
+          dispatch(counter.increment());
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          dispatch(counter.decrement());
+        }}
+      >
+        -
+      </button>
+    </div>
+  );
+};
+
+export default Temp;
+```
